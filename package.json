@@ -1,0 +1,13 @@
+{
+  "name": "image-min",
+  "version": "0.1.0",
+  "description": "minify your images",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-imagemin": "~0.1.4",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "time-grunt": "~0.2.3",
+    "load-grunt-tasks": "~0.2.0"
+  }
+}
