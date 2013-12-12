@@ -47,5 +47,9 @@ module.exports = function (grunt) {
   });
 
   // Tasks
-  grunt.registerTask('default', ['watch']);
+
+  grunt.registerTask('default', function() {
+    grunt.task.run(['imagemin']);
+    grunt.task.run(['watch']);
+  });
 };
