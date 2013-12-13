@@ -38,10 +38,28 @@ module.exports = function (grunt) {
       }
     },
 
+    // tiny png settings
+    tinypng: {
+    	options: {
+        // add your own api key here
+        apiKey: ""
+      },
+      files: {
+        expand: true,
+        cwd: 'images/',
+        src: '*.png',
+        dest: 'images-tiny/'
+      }
+    },
+
     watch: {
       image_min: {
         files: ['images/**/*.{png,jpg,gif,jpeg}'],
         tasks: ['imagemin']
+      },
+      tiny: {
+        files: ['images/**/*.png'],
+        tasks: ["tinypng"]
       }
     },
   });
@@ -52,4 +70,9 @@ module.exports = function (grunt) {
     grunt.task.run(['imagemin']);
     grunt.task.run(['watch']);
   });
+
+  grunt.registerTask('all', function() {
+    grunt.task.run(['imagemin', 'tinypng']);
+  });
+
 };

@@ -1,1 +1,10 @@
 node_modules
+
+images/*
+!images/readme.md
+
+images-min/*
+!images-min/readme.md
+
+images-tiny/*
+!images-tiny/readme.md
